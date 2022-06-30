@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/locationFragment">
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="hr.isinkovic.myapplication.ui.location.LocationFragment"
+        android:label="LocationFragment">
+        <action
+            android:id="@+id/action_locationFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="hr.isinkovic.myapplication.ui.payment.PaymentFragment"
+        android:label="CardTimeFragment">
+        <action
+            android:id="@+id/action_paymentFragment_to_progressFragment"
+            app:destination="@id/progressFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/progressFragment"
+        android:name="hr.isinkovic.myapplication.ui.progress.ProgressFragment"
+        android:label="ProgressFragment">
+        <action
+            android:id="@+id/action_progressFragment_to_locationFragment"
+            app:destination="@id/locationFragment"/>
+    </fragment>
+</navigation>

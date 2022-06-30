@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_lat">45.808000</string>
+    <string name="default_lon">15.941229</string>
+</resources>

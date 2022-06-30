@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/marginSmall"
+    tools:context=".ui.progress.ProgressFragment">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginNormal"
+        android:text="@string/lbl_added_home_location"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/textL"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fuelTooltipText"
+        android:layout_marginStart="@dimen/marginNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginLarge"
+        android:text="@string/lbl_progress_fuel_selected"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/textM"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/fuelValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginSmall"
+        android:textColor="@color/grey80"
+        app:layout_constraintBaseline_toBaselineOf="@id/fuelTooltipText"
+        app:layout_constraintStart_toEndOf="@id/fuelTooltipText" />
+
+    <TextView
+        android:id="@+id/locationTooltipText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginLarge"
+        android:text="@string/lbl_progress_car_location"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/textM"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/fuelTooltipText"
+        app:layout_constraintTop_toBottomOf="@id/fuelTooltipText"
+        app:layout_goneMarginTop="@dimen/marginSmall" />
+
+    <TextView
+        android:id="@+id/locationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginSmall"
+        android:textColor="@color/grey80"
+        app:layout_constraintBaseline_toBaselineOf="@id/locationTooltipText"
+        app:layout_constraintStart_toEndOf="@id/locationTooltipText" />
+
+    <TextView
+        android:id="@+id/timeTooltipText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginLarge"
+        android:text="@string/lbl_progress_time"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/textM"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/locationTooltipText"
+        app:layout_constraintTop_toBottomOf="@id/locationTooltipText"
+        app:layout_goneMarginTop="@dimen/marginSmall" />
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginSmall"
+        android:textColor="@color/grey80"
+        app:layout_constraintBaseline_toBaselineOf="@id/timeTooltipText"
+        app:layout_constraintStart_toEndOf="@id/timeTooltipText" />
+
+    <TextView
+        android:id="@+id/cardTooltipText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginLarge"
+        android:text="@string/lbl_progress_card"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/textM"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/timeTooltipText"
+        app:layout_constraintTop_toBottomOf="@id/timeTooltipText"
+        app:layout_goneMarginTop="@dimen/marginSmall" />
+
+    <TextView
+        android:id="@+id/cardText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginSmall"
+        android:textColor="@color/grey80"
+        app:layout_constraintBaseline_toBaselineOf="@id/cardTooltipText"
+        app:layout_constraintStart_toEndOf="@id/cardTooltipText" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/marginXXLarge"
+        app:layout_constraintBottom_toTopOf="@id/cancelBtn"
+        app:layout_constraintTop_toBottomOf="@id/cardTooltipText" />
+
+    <TextView
+        android:id="@+id/cancelBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button_next"
+        android:gravity="center"
+        android:minHeight="@dimen/marginXXLarge"
+        android:text="@string/lbl_btn_cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textL"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
