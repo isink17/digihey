@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_about">About</string>
+
+    <string name="pickupLocation">Pickup location</string>
+    <string name="pickupDetails">Pickup details</string>
+    <string name="menuProgress">Progress</string>
+    <string name="common_lbl_yes">Yes</string>
+    <string name="common_lbl_no">No</string>
+    <string name="lbl_btn_next">Next</string>
+    <string name="lbl_marker_car_location">My car location</string>
+    <string name="lbl_marker_my_location">My location</string>
+    <string name="lbl_request_location">Please allow location permission</string>
+    <string name="lbl_title_home_location">Set as Home location</string>
+    <string name="lbl_text_home_location">Do you want to set current location as home location?</string>
+    <string name="lbl_added_home_location">Location added as home location</string>
+    <string name="lbl_select_fuel_type">Please select the fuel type</string>
+    <string name="lbl_turn_on_location">Please turn on location</string>
+    <string name="lbl_title_pickup_time">Pickup time</string>
+    <string name="lbl_title_payment_method">Payment method</string>
+    <string name="lbl_switch_text_morning">MORNING</string>
+    <string name="lbl_switch_text_afternoon">AFTERNOON</string>
+    <string name="lbl_btn_order">Order a Boost</string>
+
+    <string name="lbl_title_progress">Request in progress</string>
+    <string name="lbl_progress_fuel_selected">Fuel selected:</string>
+    <string name="lbl_progress_car_location">Car location:</string>
+    <string name="lbl_progress_time">Time:</string>
+    <string name="lbl_progress_card">With card:</string>
+    <string name="lbl_btn_cancel">Cancel the Boost</string>
+    <string name="lbl_progress_fuel">%s at the price of %s per gallon</string>
+    <string name="lbl_progress_regular">Premium, at the price of $2.80 per gallon</string>
+    <string name="lbl_progress_morning">Morning</string>
+    <string name="lbl_progress_afternoon">Afternoon</string>
+
+    <string name="lbl_fuel_premium_price">$2.80</string>
+    <string name="lbl_fuel_premium">Premium 91</string>
+    <string name="lbl_fuel_regular_price">$2.40</string>
+    <string name="lbl_fuel_regular">Regular 87</string>
+    <string name="lbl_location_zoom">Zoom &amp; drag map to pin exact spot</string>
+</resources>

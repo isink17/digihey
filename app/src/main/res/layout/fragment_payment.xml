@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Wrapping the layout into /layout to make it available with data binding. -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/marginSmall"
+    tools:context=".ui.payment.PaymentFragment">
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_title_pickup_time"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/textL"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <hr.isinkovic.myapplication.ui.AnimatedSwitch
+        android:id="@+id/animatedSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginSmall"
+        android:layout_marginTop="@dimen/marginSmall"
+        app:backgroundColor="@color/light_grey"
+        app:layout_constraintStart_toStartOf="@id/timeText"
+        app:layout_constraintTop_toBottomOf="@id/timeText"
+        app:leftText="@string/lbl_switch_text_morning"
+        app:rightText="@string/lbl_switch_text_afternoon"
+        app:selectedTextColor="@color/white"
+        app:switchColor="@color/gradient_start"
+        app:unselectedTextColor="@color/dark_grey" />
+
+    <TextView
+        android:id="@+id/cardText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_title_payment_method"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/textL"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/cardPicker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/animatedSwitch"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <Spinner
+        android:id="@+id/cardPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/marginNormal"
+        android:backgroundTint="@color/dark_grey"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/proceedBtn"
+        app:layout_constraintTop_toBottomOf="@id/animatedSwitch"
+        app:layout_constraintVertical_bias="0.2"
+        tools:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/proceedBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/animatedSwitch"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/proceedBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button_next"
+        android:gravity="center"
+        android:minHeight="@dimen/marginXXLarge"
+        android:text="@string/lbl_btn_order"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textL"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
